@@ -5,6 +5,21 @@ const GlobalStyles = createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
 */
+:root {
+  --color-white: 0deg 0% 100%;
+  --color-gray-100: 185deg 5% 95%;
+  --color-gray-300: 190deg 5% 80%;
+  --color-gray-500: 196deg 4% 60%;
+  --color-gray-700: 220deg 5% 40%;
+  --color-gray-900: 220deg 3% 20%;
+  --color-primary: 340deg 65% 47%;
+  --color-secondary: 240deg 60% 63%;
+
+  --weight-normal: 500;
+  --weight-medium: 600;
+  --weight-bold: 800;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
