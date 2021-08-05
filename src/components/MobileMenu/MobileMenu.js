@@ -8,10 +8,6 @@ import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
 
 const MobileMenu = ({ isOpen, onDismiss }) => {
-  if (!isOpen) {
-    return null;
-  }
-
   return (
     <Overlay
       isOpen={isOpen}
@@ -49,14 +45,14 @@ const Overlay = styled(DialogOverlay)`
   left: 0;
   width: 100%;
   height: 100%;
-  background: hsl(var(--color-gray-700) / 80%);
+  background: var(--color-backdrop);
 `
 
 const Content = styled(DialogContent)`
   margin-left: auto;
   width: clamp(${300 / 16}rem, 80%, ${880 / 16}rem);
   height: 100%;
-  background: hsl(var(--color-white));
+  background: var(--color-white);
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -65,8 +61,9 @@ const Content = styled(DialogContent)`
 
 const CloseButton = styled(UnstyledButton)`
   position: absolute;
-  top: 26px;
-  right: 26px;
+  top: 10px;
+  right: 0;
+  padding: 16px;
 `;
 
 const Side = styled.div`
@@ -84,13 +81,13 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: hsl(var(--color-gray-900));
+  color: var(--color-gray-900);
   font-weight: var(--weight-medium);
   width: 100%;
   padding: 6px 0;
 
   &:first-of-type {
-    color: hsl(var(--color-secondary));
+    color: var(--color-secondary);
   }
 `;
 
@@ -103,7 +100,7 @@ const Footer = styled.footer`
 const FooterLink = styled.a`
   font-size: 0.875rem;
   text-decoration: none;
-  color: hsl(var(--color-gray-700));
+  color: var(--color-gray-700);
   font-weight: var(--weight-medium);
   width: 100%;
   padding: 4px 0;

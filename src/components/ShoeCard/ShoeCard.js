@@ -46,7 +46,7 @@ const ShoeCard = ({
           <Price
             style={{
               '--color':
-                variant === 'on-sale' ? 'hsl(var(--color-gray-700))' : undefined,
+                variant === 'on-sale' ? 'var(--color-gray-700)' : undefined,
               '--text-decoration':
                 variant === 'on-sale' ? 'line-through' : undefined,
             }}
@@ -89,7 +89,7 @@ const Row = styled.div`
 
 const Name = styled.h3`
   font-weight: var(--weight-medium);
-  color: hsl(var(--color-gray-900));
+  color: var(--color-gray-900);
 `;
 
 const Price = styled.span`
@@ -98,12 +98,12 @@ const Price = styled.span`
 `;
 
 const ColorInfo = styled.p`
-  color: hsl(var(--color-gray-700));
+  color: var(--color-gray-700);
 `;
 
 const SalePrice = styled.span`
   font-weight: var(--weight-medium);
-  color: hsl(var(--color-primary));
+  color: var(--color-primary);
 `;
 
 const Flag = styled.div`
@@ -116,15 +116,15 @@ const Flag = styled.div`
   padding: 0 10px;
   font-size: ${14 / 18}rem;
   font-weight: var(--weight-bold);
-  color: hsl(var(--color-white));
+  color: var(--color-white);
   border-radius: 2px;
 `;
 
 const SaleFlag = styled(Flag)`
-  background-color: hsl(var(--color-primary));
+  background-color: var(--color-primary);
 `;
 const NewFlag = styled(Flag)`
-  background-color: hsl(var(--color-secondary));
+  background-color: var(--color-secondary);
 `;
 
 export default ShoeCard;

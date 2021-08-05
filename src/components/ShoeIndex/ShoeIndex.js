@@ -15,8 +15,10 @@ const ShoeIndex = ({ sortId, setSortId }) => {
       <MainColumn>
         <Header>
           <TitleWrapper>
+            <MobileBreadcrumbs>
+              <BreadcrumbsWrapped />
+            </MobileBreadcrumbs>
             <Title>Running</Title>
-            <BreadcrumbsWrapped />
           </TitleWrapper>
           <SelectWrapper>
             <Select
@@ -43,7 +45,6 @@ const ShoeIndex = ({ sortId, setSortId }) => {
 
 const BreadcrumbsWrapped = () => {
   return (
-    <BreadcrumbsDisplayControl>
       <Breadcrumbs>
         <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
         <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
@@ -51,7 +52,6 @@ const BreadcrumbsWrapped = () => {
           Shoes
         </Breadcrumbs.Crumb>
       </Breadcrumbs>
-    </BreadcrumbsDisplayControl>
   )
 }
 
@@ -78,33 +78,28 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  @media ${QUERIES.tabletAndDown} {
+    align-items: flex-end;
+  }
 `;
 
 const TitleWrapper = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+`;
+
+const MobileBreadcrumbs = styled.div`
+  display: none;
+
+  @media ${QUERIES.tabletAndDown} {
+    display: unset;
+  }
 `;
 
 const SelectWrapper = styled.div`
-  @media ${QUERIES.tabletAndDown} {
-    position: relative;
-    bottom: 4px;
-  }
-
   @media ${QUERIES.mobileAndDown} {
     display: none;
-  }
-`;
-
-const BreadcrumbsDisplayControl = styled.div`
-  ${TitleWrapper} & {
-    display: none;
-  }
-
-  @media ${QUERIES.tabletAndDown} {
-    ${TitleWrapper} & {
-      display: unset;
-    }
   }
 `;
 

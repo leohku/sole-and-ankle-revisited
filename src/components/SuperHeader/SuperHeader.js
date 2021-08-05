@@ -26,8 +26,8 @@ const SuperHeader = () => {
 
 const Wrapper = styled.div`
   font-size: 0.875rem;
-  color: hsl(var(--color-gray-300));
-  background-color: hsl(var(--color-gray-900));
+  color: var(--color-gray-300);
+  background-color: var(--color-gray-900);
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
@@ -49,7 +49,7 @@ const DesktopWrapper = styled.div`
 `;
 
 const MarketingMessage = styled.span`
-  color: hsl(var(--color-white));
+  color: var(--color-white);
   margin-right: auto;
 `;
 
